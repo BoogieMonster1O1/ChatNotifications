@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "chatnotifications",
+  "version": "${version}",
+  "name": "ChatNotifications",
+  "description": "Desktop Notifications for Chat messages",
+  "authors": [
+    "BoogieMonster1O1"
+  ],
+  "contact": {
+    "website": "https://github.com/BoogieMonster1O1/ChatNotifications",
+    "repo": "https://github.com/BoogieMonster1O1/ChatNotifications"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.boogiemonser1o1.chatnotifications.ChatNotifications"
+    ]
+  },
+  "mixins": [
+    "chatnotifications.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.9",
+    "fabric": "*",
+    "minecraft": "1.19.2"
+  }
+}
