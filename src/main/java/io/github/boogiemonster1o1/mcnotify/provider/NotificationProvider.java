@@ -1,13 +1,13 @@
-package io.github.boogiemonser1o1.chatnotifications.provider;
+package io.github.boogiemonster1o1.mcnotify.provider;
 
-import io.github.boogiemonser1o1.chatnotifications.ChatNotifications;
-
-import net.minecraft.text.Text;
+import io.github.boogiemonster1o1.mcnotify.MCNotify;
 
 public interface NotificationProvider {
 	void queueMessage(String message);
 
 	void init();
+
+	void shutdown();
 
 	NotificationProvider DUMMY = new NotificationProvider() {
 		@Override
@@ -16,7 +16,11 @@ public interface NotificationProvider {
 
 		@Override
 		public void init() {
-			ChatNotifications.LOGGER.warn("Notifications are not supported on this platform");
+			MCNotify.LOGGER.warn("Notifications are not supported on this platform");
+		}
+
+		@Override
+		public void shutdown() {
 		}
 	};
 }

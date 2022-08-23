@@ -1,11 +1,12 @@
 {
   "schemaVersion": 1,
-  "id": "chatnotifications",
+  "id": "mcnotify",
   "version": "${version}",
-  "name": "ChatNotifications",
+  "name": "MCNotify",
   "description": "Desktop Notifications for Chat messages",
   "authors": [
-    "BoogieMonster1O1"
+    "BoogieMonster1O1",
+    "heftymouse"
   ],
   "contact": {
     "website": "https://github.com/BoogieMonster1O1/ChatNotifications",
@@ -15,11 +16,11 @@
   "environment": "client",
   "entrypoints": {
     "client": [
-      "io.github.boogiemonser1o1.chatnotifications.ChatNotifications"
+      "io.github.boogiemonster1o1.mcnotify.MCNotify"
     ]
   },
   "mixins": [
-    "chatnotifications.mixins.json"
+    "mcnotify.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=0.14.9",

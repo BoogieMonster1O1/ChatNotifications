@@ -13,12 +13,6 @@ repositories {
             includeGroup "me.shedaniel.cloth"
         }
     }
-    maven {
-        url 'https://jitpack.io'
-        content {
-            includeGroup "com.github.BoogieMonster1O1"
-        }
-    }
 }
 
 dependencies {
@@ -32,8 +26,6 @@ dependencies {
     modApi("me.shedaniel.cloth:cloth-config-fabric:${project.cloth_config_version}") {
         exclude(group: "net.fabricmc.fabric-api")
     }
-    implementation "com.eatthepath:pushy:0.15.1"
-    implementation 'com.github.BoogieMonster1O1:two-slices:master-SNAPSHOT'
 }
 
 processResources {

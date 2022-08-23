@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "io.github.boogiemonser1o1.chatnotifications.mixin",
+  "package": "io.github.boogiemonster1o1.mcnotify.mixin",
   "compatibilityLevel": "JAVA_17",
   "client": [
     "MessageHandlerMixin"
