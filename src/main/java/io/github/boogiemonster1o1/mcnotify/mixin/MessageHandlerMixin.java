@@ -16,7 +16,7 @@ public class MessageHandlerMixin {
 	@Inject(method = "onChatMessage", at = @At("HEAD"))
 	public void onChatMessageReceived(SignedMessage message, MessageType.Parameters params, CallbackInfo ci) {
 		String content = params.applyChatDecoration(message.getContent()).getString();
-		if (content.toLowerCase().contains(MinecraftClient.getInstance().getSession().getUsername().toLowerCase())) {
+		if (content.toLowerCase().contains(MinecraftClient.getInstance().getSession().getUsername().toLowerCase()) && !MinecraftClient.getInstance().isWindowFocused()) {
 			MCNotify.queueMessage(content);
 		}
 	}
