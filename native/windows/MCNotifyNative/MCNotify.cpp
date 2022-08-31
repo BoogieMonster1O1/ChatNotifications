@@ -64,8 +64,13 @@ JNIEXPORT void JNICALL Java_io_github_boogiemonster1o1_mcnotify_provider_Windows
 JNIEXPORT void JNICALL Java_io_github_boogiemonster1o1_mcnotify_provider_WindowsProvider_00024Native_shutdown(JNIEnv*, jclass)
 {
     // we don't really care about errors here since we're shutting down anyways
-    AppNotificationManager::Default().RemoveAllAsync().get();
+    RemoveNotifications();
     AppNotificationManager::Default().Unregister();
     winrt::uninit_apartment();
     MddBootstrapShutdown();
+}
+
+winrt::fire_and_forget RemoveNotifications()
+{
+    co_await AppNotificationManager::Default().RemoveAllAsync();
 }
