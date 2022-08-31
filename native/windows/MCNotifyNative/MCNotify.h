@@ -36,4 +36,5 @@ JNIEXPORT void JNICALL Java_io_github_boogiemonster1o1_mcnotify_provider_Windows
 #ifdef __cplusplus
 }
 #endif
+winrt::fire_and_forget RemoveNotifications();
 #endif
