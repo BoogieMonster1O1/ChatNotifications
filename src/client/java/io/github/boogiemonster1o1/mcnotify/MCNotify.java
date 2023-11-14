@@ -33,8 +33,6 @@ public class MCNotify implements ClientModInitializer {
 		};
 
 		PROVIDER.init();
-//		queueMessage("Lol");
-//		queueMessage("Lmao");
 
 		ClientLifecycleEvents.CLIENT_STOPPING.register((client -> PROVIDER.shutdown()));
 	}
